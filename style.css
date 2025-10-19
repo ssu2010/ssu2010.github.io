@@ -438,4 +438,133 @@ body {
         width: 100%;
         height: 400px;
     }
+
+}
+media (max-width: 768px) {
+    .top-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .about-me,
+    .education,
+    .experience,
+    .projects {
+        grid-column: 1 / 2;
+        margin-bottom: 0;
+    }
+    
+    .about-me { 
+        grid-row: 1 / 2; 
+        padding: 20px;
+    }
+    .education { 
+        grid-row: 2 / 3; 
+        padding: 20px;
+    }
+    .experience { 
+        grid-row: 3 / 4; 
+        padding: 20px;
+    }
+    .projects { 
+        grid-row: 4 / 5; 
+        padding: 20px;
+    }
+    
+    .about-me {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .profile-photo {
+        margin: 0 auto;
+        width: 150px;
+        height: 150px;
+    }
+    
+    .about-me h2,
+    .education h2,
+    .experience h2,
+    .projects h2 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+    
+    .about-me p,
+    .education-content p,
+    .experience-content p,
+    .project-description {
+        font-size: 0.9em;
+        line-height: 1.5;
+    }
+    
+    .container {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .map-container {
+        height: 300px;
+        width: 100%;
+    }
+    
+    .timeline-container {
+        width: 100%;
+        height: 350px;
+    }
+    
+    .navigation-buttons {
+        padding: 10px 15px;
+    }
+    
+    .nav-btn {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-section {
+        padding: 10px;
+        gap: 10px;
+    }
+    
+    .about-me,
+    .education,
+    .experience,
+    .projects {
+        padding: 15px;
+    }
+    
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .map-container {
+        height: 250px;
+    }
+    
+    .timeline-container {
+        height: 300px;
+    }
+    
+    .about-me h2,
+    .education h2,
+    .experience h2,
+    .projects h2 {
+        font-size: 1.3em;
+    }
+    
+    .about-me p,
+    .education-content p,
+    .experience-content p,
+    .project-description {
+        font-size: 0.85em;
+    }
 }
