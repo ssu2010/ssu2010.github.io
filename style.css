@@ -395,36 +395,18 @@ body {
     cursor: not-allowed;
 }
 
-/* Если вдруг кто с телефона решит открыть */
-@media (max-width: 1200px) {
+/* Если вдруг кто с телефона или планшета решит открыть */
+@media (max-width: 1024px) {
     .top-section {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto;
-    }
-    
-    .about-me,
-    .education,
-    .experience,
-    .projects {
-        grid-column: 1 / 2;
-    }
-    
-    .about-me { grid-row: 1 / 2; }
-    .education { grid-row: 2 / 3; }
-    .experience { grid-row: 3 / 4; }
-    .projects { grid-row: 4 / 5; }
-    
-    .about-me {
         flex-direction: column;
-        text-align: center;
+        gap: 15px;
+        padding: 15px;
     }
     
-    .profile-photo {
-        margin: 0 auto;
+    .info-block {
+        width: 100%;
     }
-}
-
-@media (max-width: 900px) {
+    
     .container {
         flex-direction: column;
         height: auto;
@@ -438,39 +420,17 @@ body {
         width: 100%;
         height: 400px;
     }
-
 }
-media (max-width: 768px) {
+
+/* Адаптация для телефонов */
+@media (max-width: 768px) {
     .top-section {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto;
-        gap: 15px;
+        padding: 10px;
+        gap: 10px;
+    }
+    
+    .info-block {
         padding: 15px;
-    }
-    
-    .about-me,
-    .education,
-    .experience,
-    .projects {
-        grid-column: 1 / 2;
-        margin-bottom: 0;
-    }
-    
-    .about-me { 
-        grid-row: 1 / 2; 
-        padding: 20px;
-    }
-    .education { 
-        grid-row: 2 / 3; 
-        padding: 20px;
-    }
-    .experience { 
-        grid-row: 3 / 4; 
-        padding: 20px;
-    }
-    .projects { 
-        grid-row: 4 / 5; 
-        padding: 20px;
     }
     
     .about-me {
@@ -480,72 +440,136 @@ media (max-width: 768px) {
     }
     
     .profile-photo {
+        width: 120px;
+        height: 120px;
         margin: 0 auto;
-        width: 150px;
-        height: 150px;
     }
     
-    .about-me h2,
-    .education h2,
-    .experience h2,
-    .projects h2 {
-        font-size: 1.5em;
-        margin-bottom: 15px;
+    .contact-info {
+        text-align: center;
     }
     
-    .about-me p,
-    .education-content p,
-    .experience-content p,
-    .project-description {
-        font-size: 0.9em;
-        line-height: 1.5;
+    /* Адаптация проектов */
+    .projects-section {
+        padding: 0 10px 10px;
     }
     
-    .container {
-        flex-direction: column;
-        height: auto;
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .project-item {
         padding: 15px;
+    }
+    
+    /* Адаптация контейнера с картой */
+    .container {
+        padding: 10px;
         gap: 15px;
     }
     
     .map-container {
         height: 300px;
-        width: 100%;
     }
     
     .timeline-container {
-        width: 100%;
         height: 350px;
     }
     
+    /* Адаптация слайдов таймлайна */
+    .slide {
+        padding: 20px;
+    }
+    
+    .timeline-year {
+        font-size: 20px;
+    }
+    
+    .timeline-event {
+        font-size: 18px;
+    }
+    
+    .timeline-location {
+        font-size: 14px;
+    }
+    
+    /* Адаптация навигационных кнопок */
     .navigation-buttons {
         padding: 10px 15px;
     }
     
     .nav-btn {
         padding: 10px 15px;
-        font-size: 0.9em;
+        font-size: 14px;
+    }
+    
+    /* Адаптация элементов управления картой */
+    .route-controls {
+        top: 10px;
+        right: 10px;
+        padding: 8px;
+    }
+    
+    .slide-counter {
+        bottom: 10px;
+        right: 10px;
+        font-size: 12px;
     }
 }
 
+/* Адаптация для очень маленьких телефонов */
 @media (max-width: 480px) {
     .top-section {
-        padding: 10px;
-        gap: 10px;
+        padding: 8px;
+        gap: 8px;
     }
     
-    .about-me,
-    .education,
-    .experience,
-    .projects {
-        padding: 15px;
+    .info-block {
+        padding: 12px;
     }
     
     .profile-photo {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
     }
     
+    /* Уменьшаем шрифты */
+    .info-content h2,
+    .education h2,
+    .experience h2,
+    .projects-section h2 {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+    
+    .info-content h3,
+    .education-item h3,
+    .experience-item h3 {
+        font-size: 1.1em;
+    }
+    
+    .info-content p,
+    .education-item p,
+    .experience-item p,
+    .project-description {
+        font-size: 0.85em;
+    }
+    
+    /* Адаптация скиллов и технологий */
+    .skill-tags,
+    .project-tech {
+        gap: 5px;
+    }
+    
+    .skill-tag,
+    .project-tech span,
+    .tech-tag {
+        font-size: 0.75em;
+        padding: 3px 8px;
+    }
+    
+    /* Дальнейшее уменьшение высот контейнеров */
     .map-container {
         height: 250px;
     }
@@ -554,17 +578,32 @@ media (max-width: 768px) {
         height: 300px;
     }
     
-    .about-me h2,
-    .education h2,
-    .experience h2,
-    .projects h2 {
-        font-size: 1.3em;
+    .slide {
+        padding: 15px;
     }
     
-    .about-me p,
-    .education-content p,
-    .experience-content p,
-    .project-description {
-        font-size: 0.85em;
+    .timeline-year {
+        font-size: 18px;
+    }
+    
+    .timeline-event {
+        font-size: 16px;
+    }
+}
+
+/* Дополнительная адаптация для горизонтальной ориентации телефона */
+@media (max-width: 768px) and (orientation: landscape) {
+    .container {
+        flex-direction: row;
+        height: 60vh;
+    }
+    
+    .map-container {
+        height: 100%;
+    }
+    
+    .timeline-container {
+        height: 100%;
+        width: 300px;
     }
 }
