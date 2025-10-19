@@ -398,6 +398,7 @@ body {
 /* Если вдруг кто с телефона или планшета решит открыть */
 @media (max-width: 1024px) {
     .top-section {
+        display: block;
         flex-direction: column;
         gap: 15px;
         padding: 15px;
@@ -422,9 +423,11 @@ body {
     }
 }
 
-/* Адаптация для телефонов */
+
 @media (max-width: 768px) {
     .top-section {
+        display: block;
+        flex-direction: column;
         padding: 10px;
         gap: 10px;
     }
@@ -607,3 +610,4 @@ body {
         width: 300px;
     }
 }
+
