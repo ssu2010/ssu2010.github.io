@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивный таймлайн жизни</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Верхние информационные блоки -->
+    <div class="top-section">
+        <!-- Блок с фото и информацией о себе -->
+        <div class="info-block about-me">
+            <div class="photo-container">
+                <img src="0B7A0074.png" alt="Фото профиля" class="profile-photo">
+            </div>
+            <div class="info-content">
+                <h2>Александр Козловский</h2>
+                <p>к.ф.-м.н., доцент кафедры высшей математики в Санкт-Петербургском политехническом университете Петра Великого</p>
+		        <h3>О себе</h3>
+                <p>Мне 32 года. В прошлом году я переехал в Санкт-Петербург из Саратова.</p>
+		        <p>Имею более 10 лет опыта преподавания и работы в междисциплинарных исследованиях на стыке твердотельной электроники, физической химии и математического моделирования (<a href="https://scholar.google.com/citations?hl=ru&user=O0ILrCQAAAAJ&view_op=list_works&sortby=pubdate", target="_blank">публикации</a>).</p>
+		        <p>Со мной можно связаться в <a href="https://t.me/tmt_nsc", target="_blank">телеграме</a>.</p>
+                <div class="skills">
+                <h3>Ключевые навыки</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Atomic Force Microscopy</span>
+                        <span class="skill-tag">COMSOL Multiphysics</span>
+                        <span class="skill-tag">SolidWorks</span>
+                        <span class="skill-tag">Blender</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">ORCA</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">Фотополимерная 3D-печать</span>
+                        <span class="skill-tag">Английский B2</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Блок с образованием -->
+        <div class="info-block education">
+            <h2>Образование</h2>
+            <div class="education-item">
+                <h3>Магистратура</h3>
+		<p class="edu_direction">Прикладная математика и информатика (Вычислительная биология и биоинформатика)</p>
+                <p class="institution">НИУ ВШЭ - Санкт-Петербург</p>
+                <p class="years">2025-сейчас</p>
+            </div>
+            <div class="education-item">
+                <h3>Кандидат физико-математических наук</h3>
+                <p class="title"><a href="https://old.sgu.ru/sites/default/files/dissertation/2019/10/14/dissertaciya_kozlovskiyav.pdf", target="_blank">Фотостимуляция твердотельных сенсорных структур на основе кремния и полиэлектролитного покрытия</a></p>
+                <p class="edu_direction">Электроника, радиотехника и системы связи</p>
+                <p class="institution">Саратовский национальный исследовательский университет имени Н.Г. Чернышевского</p>
+                <p class="years">2015-2019</p>
+            </div>
+            <div class="education-item">
+                <h3>Специалист</h3>
+                <p class="title">Зависимость параметров и характеристик структуры кремний/полиэтиленимин/глюкозооксидаза от условий получения органических покрытий</p>
+		<p class="edu_direction">Материаловедение и технология материалов</p>
+                <p class="institution">Саратовский национальный исследовательский университет имени Н.Г. Чернышевского</p>
+                <p class="years">2010-2015</p>
+            </div>
+            <div class="education-item">
+                <h3>Дополнительное образование</h3>
+		<p class="edu_direction">Специалист по Data Science</p>
+                <p class="institution">Автономная Некоммерческая Организация Дополнительного Профессионального Образования "Школа анализа данных" (АНО ДПО "ШАД")</p>
+                <p class="years">2021-2022</p>
+            </div>
+        </div>
+
+        <!-- Блок с опытом работы -->
+        <div class="info-block experience">
+            <h2>Опыт работы</h2>
+            <div class="experience-item">
+                <h3>Доцент кафедры высшей математики</h3>
+                <p class="institution">Санкт-Петебургский политехнических университет Петра Великого</p>
+                <p class="years">2024-сейчас</p>
+            </div>
+            <div class="experience-item">
+                <h3>Доцент кафедры материаловедения, технологии и управления качеством</h3>
+                <p class="institution">Саратовский национальный исследовательский университет имени Н.Г. Чернышевского</p>
+                <p class="years">2021-2025</p>
+            </div>
+	    <div class="experience-item">
+                <h3>Ассистент кафедры материаловедения, технологии и управления качеством</h3>
+                <p class="institution">Саратовский национальный исследовательский университет имени Н.Г. Чернышевского</p>
+                <p class="years">2016-2021</p>
+            </div>
+	    <div class="experience-item">
+                <h3>Техник-программист кафедры материаловедения, технологии и управления качеством</h3>
+                <p class="institution">Саратовский национальный исследовательский университет имени Н.Г. Чернышевского</p>
+                <p class="years">2013-2016</p>
+            </div>
+        </div>
+    </div>   
+        <!-- Блок с опытом работы в проектах -->
+        <div class="projects-section">
+        <div class="info-block projects">
+            <h2>Опыт работы в проектах</h2>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <h3>Создание музыкальной рекомендательной системы на основе данных электроэнцефалографии</h3>
+                    <p class="years">2024-сейчас</p>
+                    <p class="project-description">Pet-проект, вдохновленный бывшим коллегой из Саратовского университета. Имея портативный электроэнцефалограф я собрал ЭЭГ с 12 человек в процессе прослушивания ими треков в Яндекс Музыке. По измеренным ЭЭГ определялась частота альфа-пика (IAF), а также 5 психофизиологических состояний (расслабленность, стресс, фокус, злость, самоконтроль). Была составлена матрица взаимодействия между слушателями и треками и обучено несколько моделей для предсказания пропущенных значений в матрице взаимодействий.</p>
+                    <p class="project-description">После получения новых знаний и навыков в магистратуре ВШЭ я планирую вернуться к этому проекту.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Google Colab</span>
+                        <span class="tech-tag">API</span>
+                        <span class="tech-tag">ЭЭГ</span>
+                        <span class="tech-tag">Графовые нейронные сети</span>
+                        <span class="tech-tag">Рекомендательные системы</span>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <h3>РНФ № 23-22-00047 - Инновационный подход к формированию кристаллических кремниевых структур на гибких подложках с помощью лазерстимулированной металл-индуцированной кристаллизации</h3>
+                    <p class="years">2023-2024</p>
+                    <p class="project-description">Изготавливал оснастку при помощи фотополимерной 3D-печати для измерений электрофизических и оптических характеристик тонких пленок аморфного кремния на гибкой подложке при изменении угла изгиба плёнки. Проводил измерения и обработку вольт-амперных характеристик исследуемых структур. Выступал с докладами на конференциях, таких как SPb OPEN 2024</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Фотополимерная 3D-печать</span>
+                        <span class="tech-tag">Agilent B1500A</span>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <h3>РНФ № 22-22-00194 - Новый подход к формированию многослойных наноструктурированных пленочных биосенсоров</h3>
+                    <p class="years">2022-2023</p>
+                    <p class="project-description">Являлся ответственным исполнителем: участвовал на всех этапах реализации проекта. В том числе занимался закупками - в 2022 году это был самый сложный организационный этап. Зато теперь я прошёл через все сложности, которые возможны при госзакупках. Также в рамках этого проекта я проводил много измерений на атомно-силовом микроскопе и участвовал при оформлении заявки для "свидетельства о регистрации программы ЭВМ".</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Госзакупки</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Атомно-силовая микроскопия</span>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <h3>Random sequential adsorption model for describing kinetics of photo-assisted adsorption of polyelectrolyte microcapsules on silicon substrates</h3>
+                    <p class="years">апрель-май 2018</p>
+                    <p class="project-description">Это был мой второй проект в рамках стипендии G-RISC. В Саратове мне изготовили полиэлектролитные микрокапсулы без растворения ядер, что позволило мне доставить их в Потсдамских университет, где я провел серию экспериментов с их фотостимулированной адсорбцией на кремниевые подложки разной проводимости и при разном времени адсорбции. Затем коллеги получали снимки на электронном микроскопе, которые я обрабатывал.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">SEM</span>
+                        <span class="tech-tag">photo-assisted adsorption</span>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <h3>Fabrication of multienzymatic coatings by photo-assisted adsorption of enzyme molecules onto a silicon substrate</h3>
+                    <p class="years">октябрь 2017</p>
+                    <p class="project-description">Мой первый заграничный опыт - поездка в Потсдамский университет в группу экспериментальной физики проф. Светланы Сантер. Было не просто освоиться в новой лаборатории и успеть выполнить весь запланированный объем работы за один месяц, но в целом я справился. В основном я работал в лаборатории с лазерами, создавая интерференционную картину на поверхности кремниевой подложки с тонким слоем аморфного кремния, с последующим нанесением полиэлектролитных молекул. Также проводил измерения на атомно-силовом микроскопе и зондом Кельвина. Мне удалось получить сопоставимые с интерфернционной картиной неровности слоев с ферментом, но эффект был малоуловим и дальнейшего развития эти результаты не получили.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Работа с лазерами</span>
+                        <span class="tech-tag">Атомно-силовая микроскопия</span>
+                        <span class="tech-tag">Русско-немецко-английский язык</span>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <h3>РФФИ №16-08-00524_а - Формирование регулируемого освещением пространственного и потенциального рельефа на границе раздела «полупроводник-органическое покрытие»</h3>
+                    <p class="years">2016-2018</p>
+                    <p class="project-description">Являлся ответсвенным исполнителем. Занимался проведением экспериментов фотостимулированной адсобции полиэлектролитных молекул и молекул глюкозооксидазы. Также исследовал сенсорные характеристики полученных структур - определение чувствительности к изменению pH и концентрации глюкозы.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Атомно-силовая микроскопия</span>
+                        <span class="tech-tag">EIS-сенсоры</span>
+                        <span class="tech-tag">LAPS</span>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <h3>Разработка электрохимического биодатчика с улучшенными характеристиками</h3>
+                    <p class="years">2015-2016</p>
+                    <p class="project-description">Проект в рамках конкурса УМНИК. По завершению проекта я получил уникальную электрохимическую ячейку для биосенсоров на основе структуры "электролит-диэлектрик-полупроводник". Было получено два патента на изобретения. Результаты проекта легли в основу моей кандидатской диссертации.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">SolidWorks</span>
+                        <span class="tech-tag">Agilent B1500A</span>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <h3>ФЦП «Фарма – 2020» «Разработка образовательной программы магистратуры по направлению подготовки «Материаловедение и технологии материалов» с направленностью (профилем) «Материаловедение фармацевтического и медицинского назначения»</h3>
+                    <p class="years">2014-2015</p>
+                    <p class="project-description">Занимался технической частью реализации проекта: сбором и обработкой данных от сотрудников, созданием презентаций, странички на сайте университета и пр.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Контейнер с картой и слайдером -->
+    <div class="container">
+        <div class="map-container">
+            <div id="map"></div>
+            <div class="route-controls">
+                <button id="clearLines">Очистить линии</button>
+            </div>
+            <div class="slide-counter" id="slideCounter">1 / 7</div>
+        </div>
+        
+        <div class="timeline-container">
+            <h2 class="timeline-title">Мой таймлайн без лайна</h2>
+            <div class="instructions">
+                Используйте колесико мыши для навигации по событиям
+            </div>
+            <div class="timeline-slider">
+                <div class="slides-container" id="slidesContainer">
+                    <!-- Слайды будут созданы через JavaScript -->
+                </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <button class="nav-btn" id="prevBtn" disabled>Предыдущий</button>
+                <button class="nav-btn" id="nextBtn">Следующий</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
